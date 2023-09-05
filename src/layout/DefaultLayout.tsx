@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { styled } from "styled-components";
+import { Header } from "../components/Header";
 
 interface DefaultLayoutProps {
   children: ReactNode | undefined;
@@ -9,6 +10,7 @@ export const DefaultLayout = (props: DefaultLayoutProps) => {
   return (
     <LayoutContainer>
       <LayoutWrapper>
+        <Header />
         <main>{props.children}</main>
       </LayoutWrapper>
     </LayoutContainer>
