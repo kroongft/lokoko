@@ -1,5 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 
-export const Main = () => {
-  return <div>index</div>;
-};
+export function Main() {
+  return <div>Main</div>;
+}

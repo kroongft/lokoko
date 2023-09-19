@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { styled } from "styled-components";
-import { getArmories } from "../../api/armories";
-import { IconButton, InputBase, Paper } from "@mui/material";
-import { Search } from "@mui/icons-material";
+import React, { useState } from 'react';
+import { styled } from 'styled-components';
+import { IconButton, InputBase, Paper } from '@mui/material';
+import { Search } from '@mui/icons-material';
+import { getArmories } from '../../api/armories';
 
-export const Header = () => {
-  const [keyword, setKeyword] = useState<string>("");
+export function Header() {
+  const [keyword, setKeyword] = useState<string>('');
 
   const getCharacterProfiles = async () => {
-    await getArmories(keyword, "profiles");
+    await getArmories(keyword, 'profiles');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,7 +17,7 @@ export const Header = () => {
   };
 
   const handleOnKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       getCharacterProfiles();
     }
   };
@@ -27,16 +27,16 @@ export const Header = () => {
       <HeaderTitle>LOKOKO</HeaderTitle>
       <Paper
         sx={{
-          p: "2px 4px",
-          display: "flex",
-          alignItems: "center",
+          p: '2px 4px',
+          display: 'flex',
+          alignItems: 'center',
           width: 400,
-          background: "rgb(233, 233, 233);",
-          borderRadius: "12px",
+          background: 'rgb(233, 233, 233);',
+          borderRadius: '12px',
         }}
       >
         <InputBase
-          sx={{ ml: 1, flex: 1, fontSize: "14px" }}
+          sx={{ ml: 1, flex: 1, fontSize: '14px' }}
           placeholder="캐릭터 검색"
           value={keyword}
           onChange={handleChange}
@@ -44,7 +44,7 @@ export const Header = () => {
         />
         <IconButton
           type="button"
-          sx={{ fontSize: "1rem" }}
+          sx={{ fontSize: '1rem' }}
           aria-label="search"
           onClick={() => getCharacterProfiles()}
         >
@@ -53,7 +53,7 @@ export const Header = () => {
       </Paper>
     </HeaderWrapper>
   );
-};
+}
 
 const HeaderWrapper = styled.div`
   padding: 24px;
@@ -64,7 +64,7 @@ const HeaderWrapper = styled.div`
 `;
 
 const HeaderTitle = styled.div`
-  font-family: "EF_jejudoldam";
+  font-family: 'EF_jejudoldam';
   font-size: 30px;
 `;
 

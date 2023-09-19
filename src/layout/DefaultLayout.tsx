@@ -1,21 +1,22 @@
-import React, { ReactNode } from "react";
-import { styled } from "styled-components";
-import { Header } from "../components/Header";
+import React, { ReactNode } from 'react';
+import { styled } from 'styled-components';
+import { Header } from '../components/Header';
 
 interface DefaultLayoutProps {
   children: ReactNode | undefined;
 }
 
-export const DefaultLayout = (props: DefaultLayoutProps) => {
+export function DefaultLayout(props: DefaultLayoutProps) {
+  const { children } = props;
   return (
     <LayoutContainer>
       <LayoutWrapper>
         <Header />
-        <main>{props.children}</main>
+        <main>{children}</main>
       </LayoutWrapper>
     </LayoutContainer>
   );
-};
+}
 
 const LayoutContainer = styled.div`
   width: 100%;

@@ -1,10 +1,10 @@
-import axiosInstance from "../common/axiosInstance";
+import axiosInstance from '../common/axiosInstance';
 
 export const getArmories = (
   characterName: string,
-  key: ArmoriesKeyType | null
+  key: ArmoriesKeyType | null,
 ) => {
-  let keyValue = "" as string;
+  let keyValue = '' as string;
   if (key) {
     keyValue = `/${key}`;
   }

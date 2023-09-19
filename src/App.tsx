@@ -1,12 +1,12 @@
-import { Main } from "./components/Main";
-import { DefaultLayout } from "./layout/DefaultLayout";
+import { Main } from './components/Main';
+import { DefaultLayout } from './layout/DefaultLayout';
 
-const App = () => {
+function App() {
   return (
     <DefaultLayout>
       <Main />
     </DefaultLayout>
   );
-};
+}
 
 export default App;
