@@ -1,12 +1,7 @@
-import { Main } from './components/Main';
-import { DefaultLayout } from './layout/DefaultLayout';
+import { Router } from 'routes';
 
 function App() {
-  return (
-    <DefaultLayout>
-      <Main />
-    </DefaultLayout>
-  );
+  return <Router />;
 }
 
 export default App;
